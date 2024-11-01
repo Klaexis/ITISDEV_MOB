@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "48017142465",
+    "project_id": "itisdev-application",
+    "storage_bucket": "itisdev-application.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48017142465:android:1fe7dad8fa620d43105a40",
+        "android_client_info": {
+          "package_name": "com.itisdev.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfzB9kMgMlEUko5CHEPFrF_p-z4lq5bFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
