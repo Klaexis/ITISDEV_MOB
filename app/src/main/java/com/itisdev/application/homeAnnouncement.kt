@@ -12,7 +12,7 @@ import com.google.firebase.ktx.Firebase
 
 data class User(val name: String? = null, val age: Int? = null)
 
-class MainActivity : AppCompatActivity() {
+class homeAnnouncement : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
