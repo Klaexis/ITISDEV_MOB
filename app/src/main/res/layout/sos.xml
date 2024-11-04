@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/rectangle"
+        android:fontFamily="@font/roboto"
+        android:paddingLeft="10sp"
+        android:paddingTop="10sp"
+        android:paddingRight="10sp"
+        android:paddingBottom="10sp"
+        android:text="Click the SOS button to send help"
+        android:textColor="#F2FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="413dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/sharprectangle" />
+
+    <ImageButton
+        android:id="@+id/homebtn"
+        android:layout_width="66dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="328dp"
+        android:backgroundTint="#923838"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_home_24" />
+
+    <ImageButton
+        android:id="@+id/miabtn"
+        android:layout_width="66dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginEnd="229dp"
+        android:backgroundTint="#923838"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_manage_search_24" />
+
+    <ImageButton
+        android:id="@+id/evacbtn"
+        android:layout_width="66dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="223dp"
+        android:layout_marginEnd="122dp"
+        android:backgroundTint="#923838"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_map_24" />
+
+    <ImageButton
+        android:id="@+id/sosbtn"
+        android:layout_width="66dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="329dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#923838"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_report_24" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="190dp"
+        android:layout_height="191dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="285dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="230dp"
+        android:background="@drawable/sosbg"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_sos_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

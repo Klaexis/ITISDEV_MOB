@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/announcementdatarecty"
+    android:gravity="left"
+    android:layout_marginBottom="16sp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="@font/roboto"
+        android:text="Title"
+        android:textColor="#F2FFFFFF"
+        android:singleLine="false"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:paddingTop="5sp"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Username"
+        android:textStyle="bold"
+        android:drawablePadding="3sp"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:textColor="#F2FFFFFF"
+        android:textSize="15sp"
+        android:paddingTop="5sp"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:drawablePadding="3sp"
+        android:drawableLeft="@drawable/baseline_calendar_month_24"
+        android:text="Date"
+        android:textStyle="bold"
+        android:textColor="#F2FFFFFF"
+        android:textSize="15sp"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"/>
+
+    <TextView
+        android:id="@+id/caption_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:paddingTop="5sp"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:paddingBottom="8sp"
+        android:text="Caption"
+        android:textColor="#F2FFFFFF"
+        android:textSize="20sp"
+        android:singleLine="false"/>
+
+</LinearLayout>
