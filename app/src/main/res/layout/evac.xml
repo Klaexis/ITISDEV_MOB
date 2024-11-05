@@ -5,105 +5,105 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="206dp"
-        android:background="@drawable/rectangle"
-        android:fontFamily="@font/roboto"
-        android:paddingLeft="10sp"
-        android:paddingTop="10sp"
-        android:paddingRight="10sp"
-        android:paddingBottom="10sp"
-        android:text="Evacuation Centers"
-        android:textColor="#F2FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/title"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginEnd="206dp"-->
+<!--        android:background="@drawable/rectangle"-->
+<!--        android:fontFamily="@font/roboto"-->
+<!--        android:paddingLeft="10sp"-->
+<!--        android:paddingTop="10sp"-->
+<!--        android:paddingRight="10sp"-->
+<!--        android:paddingBottom="10sp"-->
+<!--        android:text="Evacuation Centers"-->
+<!--        android:textColor="#F2FFFFFF"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="413dp"
-        android:layout_height="56dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/sharprectangle" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="413dp"-->
+<!--        android:layout_height="56dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@drawable/sharprectangle" />-->
 
-    <ImageButton
-        android:id="@+id/homebtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="328dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_home_24" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/homebtn"-->
+<!--        android:layout_width="66dp"-->
+<!--        android:layout_height="51dp"-->
+<!--        android:layout_marginStart="17dp"-->
+<!--        android:layout_marginEnd="328dp"-->
+<!--        android:backgroundTint="#923838"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@drawable/baseline_home_24" />-->
 
-    <ImageButton
-        android:id="@+id/miabtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginEnd="229dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_manage_search_24" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/miabtn"-->
+<!--        android:layout_width="66dp"-->
+<!--        android:layout_height="51dp"-->
+<!--        android:layout_marginStart="116dp"-->
+<!--        android:layout_marginEnd="229dp"-->
+<!--        android:backgroundTint="#923838"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@drawable/baseline_manage_search_24" />-->
 
-    <ImageButton
-        android:id="@+id/evacbtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="223dp"
-        android:layout_marginEnd="122dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_map_24" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/evacbtn"-->
+<!--        android:layout_width="66dp"-->
+<!--        android:layout_height="51dp"-->
+<!--        android:layout_marginStart="223dp"-->
+<!--        android:layout_marginEnd="122dp"-->
+<!--        android:backgroundTint="#923838"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@drawable/baseline_map_24" />-->
 
-    <ImageButton
-        android:id="@+id/sosbtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="329dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_report_24" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/sosbtn"-->
+<!--        android:layout_width="66dp"-->
+<!--        android:layout_height="51dp"-->
+<!--        android:layout_marginStart="329dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:backgroundTint="#923838"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@drawable/baseline_report_24" />-->
 
-    <FrameLayout
-        android:layout_width="343sp"
-        android:layout_height="546sp"
-        android:layout_marginStart="25sp"
-        android:layout_marginTop="119sp"
-        android:layout_marginEnd="25sp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/shadowbg"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constrainttop_toBottomOf="@+id/imageView">
+<!--    <FrameLayout-->
+<!--        android:layout_width="343sp"-->
+<!--        android:layout_height="546sp"-->
+<!--        android:layout_marginStart="25sp"-->
+<!--        android:layout_marginTop="119sp"-->
+<!--        android:layout_marginEnd="25sp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:background="@drawable/shadowbg"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/imageView"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constrainttop_toBottomOf="@+id/imageView">-->
 
-        <fragment
-            android:id="@+id/mapView"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+<!--        <fragment-->
+<!--            android:id="@+id/mapView"-->
+<!--            android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
 
-    </FrameLayout>
+<!--    </FrameLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
