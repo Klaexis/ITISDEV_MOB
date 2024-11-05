@@ -1,286 +1,291 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshFileMissingPerson"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
-
-    <TextView
-        android:id="@+id/title"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="239dp"
-        android:background="@drawable/rectangle"
-        android:fontFamily="@font/roboto"
-        android:paddingLeft="10sp"
-        android:paddingTop="10sp"
-        android:paddingRight="10sp"
-        android:paddingBottom="10sp"
-        android:text="File Missing Persons"
-        android:textColor="#F2FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:layout_width="387dp"
-        android:layout_height="557dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="20dp"
-        android:paddingRight="15sp"
-        android:paddingLeft="15sp"
-        android:paddingTop="15sp"
-        android:paddingBottom="15sp"
-        android:orientation="vertical"
-        android:background="@drawable/shadowbg"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:paddingLeft="15sp"
-            android:paddingRight="15sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="239dp"
             android:background="@drawable/rectangle"
-            android:text="Name:"
-            android:textSize="15sp"
             android:fontFamily="@font/roboto"
+            android:paddingLeft="10sp"
+            android:paddingTop="10sp"
+            android:paddingRight="10sp"
+            android:paddingBottom="10sp"
+            android:text="File Missing Persons"
+            android:textColor="#F2FFFFFF"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#F2FFFFFF"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/missingName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:paddingLeft="15sp"
+        <LinearLayout
+            android:layout_width="387dp"
+            android:layout_height="557dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="20dp"
             android:paddingRight="15sp"
-            android:background="@drawable/inputbg"
-            android:text="" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
             android:paddingLeft="15sp"
-            android:paddingRight="15sp"
-            android:background="@drawable/rectangle"
-            android:text="Age:"
-            android:textSize="15sp"
-            android:fontFamily="@font/roboto"
-            android:textStyle="bold"
-            android:textColor="#F2FFFFFF"/>
+            android:paddingTop="15sp"
+            android:paddingBottom="15sp"
+            android:orientation="vertical"
+            android:background="@drawable/shadowbg"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/missingAge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:paddingLeft="15sp"
-            android:paddingRight="15sp"
-            android:background="@drawable/inputbg"
-            android:text="" />
-
-        <RadioGroup
-            android:id="@+id/missingSex"
-            android:layout_width="244dp"
-            android:layout_height="40dp"
-            android:background="@drawable/rectangle"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/missingMale"
+            <TextView
+                android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:paddingTop="10sp"
                 android:paddingBottom="10sp"
                 android:paddingLeft="15sp"
                 android:paddingRight="15sp"
-                android:text="Male"
+                android:background="@drawable/rectangle"
+                android:text="Name:"
                 android:textSize="15sp"
                 android:fontFamily="@font/roboto"
                 android:textStyle="bold"
                 android:textColor="#F2FFFFFF"/>
 
-            <RadioButton
-                android:id="@+id/missingFemale"
+            <EditText
+                android:id="@+id/missingName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:paddingTop="10sp"
                 android:paddingBottom="10sp"
                 android:paddingLeft="15sp"
                 android:paddingRight="15sp"
-                android:text="Female"
+                android:background="@drawable/inputbg"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:paddingLeft="15sp"
+                android:paddingRight="15sp"
+                android:background="@drawable/rectangle"
+                android:text="Age:"
                 android:textSize="15sp"
                 android:fontFamily="@font/roboto"
                 android:textStyle="bold"
                 android:textColor="#F2FFFFFF"/>
-        </RadioGroup>
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:paddingLeft="15sp"
-            android:paddingRight="15sp"
-            android:background="@drawable/rectangle"
-            android:text="Last Time Seen:"
-            android:textSize="15sp"
-            android:fontFamily="@font/roboto"
-            android:textStyle="bold"
-            android:textColor="#F2FFFFFF"/>
+            <EditText
+                android:id="@+id/missingAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:paddingLeft="15sp"
+                android:paddingRight="15sp"
+                android:background="@drawable/inputbg"
+                android:text="" />
 
-        <EditText
-            android:id="@+id/missingTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:paddingLeft="15sp"
-            android:paddingRight="15sp"
-            android:background="@drawable/inputbg"
-            android:text="" />
+            <RadioGroup
+                android:id="@+id/missingSex"
+                android:layout_width="244dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangle"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:paddingLeft="15sp"
-            android:paddingRight="15sp"
-            android:background="@drawable/rectangle"
-            android:text="Last Time Location:"
-            android:textSize="15sp"
-            android:fontFamily="@font/roboto"
-            android:textStyle="bold"
-            android:textColor="#F2FFFFFF"/>
+                <RadioButton
+                    android:id="@+id/missingMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="10sp"
+                    android:paddingBottom="10sp"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="15sp"
+                    android:text="Male"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto"
+                    android:textStyle="bold"
+                    android:textColor="#F2FFFFFF"/>
 
-        <EditText
-            android:id="@+id/missingLocation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:paddingLeft="15sp"
-            android:paddingRight="15sp"
-            android:background="@drawable/inputbg"
-            android:text="" />
+                <RadioButton
+                    android:id="@+id/missingFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="10sp"
+                    android:paddingBottom="10sp"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="15sp"
+                    android:text="Female"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto"
+                    android:textStyle="bold"
+                    android:textColor="#F2FFFFFF"/>
+            </RadioGroup>
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:paddingLeft="15sp"
-            android:paddingRight="15sp"
-            android:background="@drawable/rectangle"
-            android:text="Description:"
-            android:textSize="15sp"
-            android:fontFamily="@font/roboto"
-            android:textStyle="bold"
-            android:textColor="#F2FFFFFF"/>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:paddingLeft="15sp"
+                android:paddingRight="15sp"
+                android:background="@drawable/rectangle"
+                android:text="Last Time Seen:"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:textColor="#F2FFFFFF"/>
 
-        <EditText
-            android:id="@+id/missingDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:paddingLeft="15sp"
-            android:paddingRight="15sp"
-            android:background="@drawable/inputbg"
-            android:text=""
-            android:inputType="textMultiLine"
-            android:singleLine="false"/>
+            <EditText
+                android:id="@+id/missingTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:paddingLeft="15sp"
+                android:paddingRight="15sp"
+                android:background="@drawable/inputbg"
+                android:text="" />
 
-        <Button
-            android:id="@+id/submitbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:paddingLeft="15sp"
+                android:paddingRight="15sp"
+                android:background="@drawable/rectangle"
+                android:text="Last Time Location:"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:textColor="#F2FFFFFF"/>
+
+            <EditText
+                android:id="@+id/missingLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:paddingLeft="15sp"
+                android:paddingRight="15sp"
+                android:background="@drawable/inputbg"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:paddingLeft="15sp"
+                android:paddingRight="15sp"
+                android:background="@drawable/rectangle"
+                android:text="Description:"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:textColor="#F2FFFFFF"/>
+
+            <EditText
+                android:id="@+id/missingDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:paddingLeft="15sp"
+                android:paddingRight="15sp"
+                android:background="@drawable/inputbg"
+                android:text=""
+                android:inputType="textMultiLine"
+                android:singleLine="false"/>
+
+            <Button
+                android:id="@+id/submitbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#923838"
+                android:text="Submit"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="413dp"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/sharprectangle" />
+
+        <ImageButton
+            android:id="@+id/homebtn"
+            android:layout_width="66dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="328dp"
             android:backgroundTint="#923838"
-            android:text="Submit"
-            android:layout_gravity="center"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_home_24" />
 
+        <ImageButton
+            android:id="@+id/miabtn"
+            android:layout_width="66dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginEnd="229dp"
+            android:backgroundTint="#923838"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_manage_search_24" />
 
-    </LinearLayout>
+        <ImageButton
+            android:id="@+id/evacbtn"
+            android:layout_width="66dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="223dp"
+            android:layout_marginEnd="122dp"
+            android:backgroundTint="#923838"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_map_24" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="413dp"
-        android:layout_height="56dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/sharprectangle" />
+        <ImageButton
+            android:id="@+id/sosbtn"
+            android:layout_width="66dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="329dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#923838"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_report_24" />
 
-    <ImageButton
-        android:id="@+id/homebtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="328dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_home_24" />
-
-    <ImageButton
-        android:id="@+id/miabtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginEnd="229dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_manage_search_24" />
-
-    <ImageButton
-        android:id="@+id/evacbtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="223dp"
-        android:layout_marginEnd="122dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_map_24" />
-
-    <ImageButton
-        android:id="@+id/sosbtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="329dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_report_24" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

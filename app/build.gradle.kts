@@ -47,6 +47,7 @@ dependencies {
     implementation ("com.google.android.gms:play-services-maps:17.0.0")
     implementation ("com.google.maps.android:android-maps-utils:2.2.5")
     implementation(libs.play.services.location)
+    implementation(libs.androidx.swiperefreshlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

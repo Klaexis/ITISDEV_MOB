@@ -87,6 +87,11 @@ class sosController : AppCompatActivity(){
                     geocoder.getFromLocation(location.latitude, location.longitude, 1)!!
                 val currentAddress = addresses[0].getAddressLine(0)
 
+                //get the current Session or current User
+//                val sp = getSharedPreferences("userSession", MODE_PRIVATE)
+//                val fullNameData = sp.getString("residentFullName", "null")
+//                val residentEmail = sp.getString("residentEmail", "null")
+
                 val fullName = "John Doe"
                 val email = "john_doe@gmail.com"
                 val sex = "Male"
@@ -121,33 +126,33 @@ class sosController : AppCompatActivity(){
 
                 // Fetch all documents in the "sos" collection
                 db.collection("sos")
-                    .get()
-                    .addOnSuccessListener { documents ->
-                        var newId = 1 // Default ID if no documents exist
-                        if (!documents.isEmpty) {
-                            var maxId = 0
-                            for (document in documents) {
-                                val docId = document.id
-                                val currentId = docId.replace("sos", "").toIntOrNull()
-                                if (currentId != null && currentId > maxId) {
-                                    maxId = currentId
-                                }
+                .get()
+                .addOnSuccessListener { documents ->
+                    var newId = 1 // Default ID if no documents exist
+                    if (!documents.isEmpty) {
+                        var maxId = 0
+                        for (document in documents) {
+                            val docId = document.id
+                            val currentId = docId.replace("sos", "").toIntOrNull()
+                            if (currentId != null && currentId > maxId) {
+                                maxId = currentId
                             }
-                            newId = maxId + 1
                         }
-
-                        // Create new SOS document with the incremented ID
-                        val sosData = SOS(fullName, email, currentAddress, dateLastSent, age, sex, isFound)
-                        db.collection("sos").document("sos$newId")
-                            .set(sosData)
-                            .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
-                            .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
-
-                        Toast.makeText(this, "Location Sent", Toast.LENGTH_SHORT).show()
+                        newId = maxId + 1
                     }
-                    .addOnFailureListener { e ->
-                        Log.w(TAG, "Error getting documents: ", e)
-                    }
+
+                    // Create new SOS document with the incremented ID
+                    val sosData = SOS(fullName, email, currentAddress, dateLastSent, age, sex, isFound)
+                    db.collection("sos").document("sos$newId")
+                        .set(sosData)
+                        .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
+                        .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
+
+                    Toast.makeText(this, "Location Sent", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { e ->
+                    Log.w(TAG, "Error getting documents: ", e)
+                }
             } else {
                 Toast.makeText(this, "Unable to get current location", Toast.LENGTH_SHORT).show()
             }
