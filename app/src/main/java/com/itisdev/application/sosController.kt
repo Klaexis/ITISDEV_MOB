@@ -2,6 +2,7 @@ package com.itisdev.application
 
 import android.Manifest
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
@@ -52,6 +53,8 @@ class sosController : AppCompatActivity(){
                 requestPermission()
             }
         }
+
+        setupFooter()
     }
 
     private fun checkPermission(): Boolean {
