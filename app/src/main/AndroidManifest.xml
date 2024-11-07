@@ -29,6 +29,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".miaController"/>
+        <activity android:name=".sosController"/>
+        <activity android:name=".evacuation"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
