@@ -1,111 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:id="@+id/refreshAnnouncement"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/AnnouncementTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20sp"
-        android:layout_marginTop="32sp"
-        android:layout_marginEnd="239sp"
-        android:background="@drawable/rectangle"
-        android:fontFamily="@font/roboto"
-        android:paddingLeft="10sp"
-        android:paddingTop="10sp"
-        android:paddingRight="10sp"
-        android:paddingBottom="10sp"
-        android:text="Announcement"
-        android:textColor="#F2FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:layout_width="387dp"
-        android:layout_height="557dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvAnnouncement"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/AnnouncementTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/shadowbg"
-            android:paddingLeft="20sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="32sp"
+            android:layout_marginEnd="239sp"
+            android:background="@drawable/rectangle"
+            android:fontFamily="@font/roboto"
+            android:paddingLeft="10sp"
             android:paddingTop="10sp"
-            android:paddingRight="20sp"
-            android:paddingBottom="10sp" />
-    </LinearLayout>
+            android:paddingRight="10sp"
+            android:paddingBottom="10sp"
+            android:text="Announcement"
+            android:textColor="#F2FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="413dp"
-        android:layout_height="56dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/sharprectangle" />
+        <LinearLayout
+            android:layout_width="387dp"
+            android:layout_height="557dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <ImageButton
-        android:id="@+id/homebtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="328dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_home_24" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAnnouncement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadowbg"
+                android:paddingLeft="20sp"
+                android:paddingTop="10sp"
+                android:paddingRight="20sp"
+                android:paddingBottom="10sp" />
+        </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/miabtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginEnd="229dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_manage_search_24" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="413dp"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/sharprectangle" />
 
-    <ImageButton
-        android:id="@+id/evacbtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="223dp"
-        android:layout_marginEnd="122dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_map_24" />
+        <ImageButton
+            android:id="@+id/homebtn"
+            android:layout_width="66dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="328dp"
+            android:backgroundTint="#923838"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_home_24" />
 
-    <ImageButton
-        android:id="@+id/sosbtn"
-        android:layout_width="66dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="329dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#923838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_report_24" />
+        <ImageButton
+            android:id="@+id/miabtn"
+            android:layout_width="66dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginEnd="229dp"
+            android:backgroundTint="#923838"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_manage_search_24" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/evacbtn"
+            android:layout_width="66dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="223dp"
+            android:layout_marginEnd="122dp"
+            android:backgroundTint="#923838"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_map_24" />
+
+        <ImageButton
+            android:id="@+id/sosbtn"
+            android:layout_width="66dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="329dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#923838"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_report_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

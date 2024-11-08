@@ -1,23 +1,14 @@
 package com.itisdev.application
 
-import android.Manifest
-import android.content.ContentValues.TAG
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
 import com.itisdev.application.R.*
 
-data class User(val name: String? = null, val age: Int? = null)
-
-class homeAnnouncement : AppCompatActivity(), OnDataFetchedListener {
+class homeAnnouncement : AppCompatActivity(), OnDataFetchedListener, SwipeRefreshLayout.OnRefreshListener {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: AnnouncementAdapter
@@ -33,6 +24,12 @@ class homeAnnouncement : AppCompatActivity(), OnDataFetchedListener {
         adapter = AnnouncementAdapter(mutableListOf(), this)
         recyclerView.adapter = adapter
 
+        swipeRefreshLayout = findViewById(R.id.refreshAnnouncement)
+        swipeRefreshLayout.setOnRefreshListener(this)
+
+        // Initialize Firebase Messaging
+        FirebaseMessaging.getInstance().subscribeToTopic("announcements")
+
         val fetchAnnouncement = fetchAnnouncement(this)
         fetchAnnouncement.execute()
 
@@ -41,5 +38,12 @@ class homeAnnouncement : AppCompatActivity(), OnDataFetchedListener {
 
     override fun onDataFetched(data: List<modelAnnouncement>) {
         adapter.updateData(data)
+    }
+
+    override fun onRefresh() {
+        // Call your data fetching function here
+        val fetchPost = fetchAnnouncement(this)
+        fetchPost.execute()
+        swipeRefreshLayout.isRefreshing = false // Reset the refresh indicator
     }
 }

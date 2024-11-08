@@ -52,6 +52,8 @@ class miaController : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener 
         swipeRefreshLayout.setOnRefreshListener(this)
 
         fileMissingPerson()
+
+        setupFooter() // Call the footer setup function
     }
 
     private fun fileMissingPerson() {
