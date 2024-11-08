@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.swiperefreshlayout)
     implementation(libs.firebase.crashlytics.buildtools)
     implementation(libs.volley)
+    implementation(libs.firebase.messaging.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
