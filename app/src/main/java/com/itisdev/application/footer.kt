@@ -15,7 +15,7 @@ fun AppCompatActivity.setupFooter() {
     }
     val evacbutton: ImageButton = findViewById(R.id.evacbtn)
     evacbutton.setOnClickListener {
-        navigateTo(MyApplication::class.java)
+        navigateTo(evacuation::class.java)
     }
     val sosbutton: ImageButton = findViewById(R.id.sosbtn)
     sosbutton.setOnClickListener {

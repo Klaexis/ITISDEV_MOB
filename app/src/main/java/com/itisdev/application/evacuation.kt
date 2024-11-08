@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.location.Geocoder
 import android.os.Bundle
 import android.os.Looper
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -173,9 +174,10 @@ class evacuation : AppCompatActivity(), OnMapReadyCallback, OnDataFetchedListene
                     "?origin=${currentLocation.latitude},${currentLocation.longitude}" +
                     "&destination=${destination.latitude},${destination.longitude}" +
                     "&mode=driving" +
-                    "AIzaSyCRpGom0CUtmivji58dzqwulOuhOy4ppHY" // Replace with your actual API key
+                    "&key=AIzaSyAxKsYMloAmVLivUkaBQFQz9T4g5Xouj4o" // Replace with your actual API key
 
             val request = JsonObjectRequest(Request.Method.GET, url, null, { response ->
+                Log.d("DirectionsAPI", "Response: $response")
                 val routes = response.getJSONArray("routes")
                 if (routes.length() > 0) {
                     val route = routes.getJSONObject(0)
@@ -199,6 +201,7 @@ class evacuation : AppCompatActivity(), OnMapReadyCallback, OnDataFetchedListene
                     Toast.makeText(this, "No routes found", Toast.LENGTH_SHORT).show()
                 }
             }, { error ->
+                Log.e("DirectionsAPI", "Error: ${error.message}")
                 Toast.makeText(this, "Error drawing navigation route: ${error.message}", Toast.LENGTH_SHORT).show()
             })
 

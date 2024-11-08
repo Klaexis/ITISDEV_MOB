@@ -26,13 +26,7 @@ class homeAnnouncement : AppCompatActivity(), OnDataFetchedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        enableEdgeToEdge()
         setContentView(layout.home)
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-//            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-//            insets
-//        }
 
         recyclerView = findViewById(id.rvAnnouncement)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -41,18 +35,6 @@ class homeAnnouncement : AppCompatActivity(), OnDataFetchedListener {
 
         val fetchAnnouncement = fetchAnnouncement(this)
         fetchAnnouncement.execute()
-
-//        val db = Firebase.firestore
-
-//        val user = User(
-//            "John Doe",
-//            20
-//        )
-//
-//        db.collection("user").document("User1")
-//            .set(user)
-//            .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
-//            .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
 
         setupFooter()
     }
