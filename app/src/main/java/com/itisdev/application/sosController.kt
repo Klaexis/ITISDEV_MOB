@@ -127,32 +127,49 @@ class sosController : AppCompatActivity(){
                     }
                 }
 
-                // Fetch all documents in the "sos" collection
+                // Check if a document with the matching email exists
                 db.collection("sos")
-                .get()
-                .addOnSuccessListener { documents ->
-                    var newId = 1 // Default ID if no documents exist
-                    if (!documents.isEmpty) {
-                        var maxId = 0
-                        for (document in documents) {
-                            val docId = document.id
-                            val currentId = docId.replace("sos", "").toIntOrNull()
-                            if (currentId != null && currentId > maxId) {
-                                maxId = currentId
+                    .whereEqualTo("email", email)
+                    .get()
+                    .addOnSuccessListener { documents ->
+                        if (documents.isEmpty) {
+                            // No document found, create a new one
+                            var newId = 1 // Default ID if no documents exist
+                            db.collection("sos")
+                                .get()
+                                .addOnSuccessListener { allDocuments ->
+                                    if (!allDocuments.isEmpty) {
+                                        var maxId = 0
+                                        for (document in allDocuments) {
+                                            val docId = document.id
+                                            val currentId = docId.replace("sos", "").toIntOrNull()
+                                            if (currentId != null && currentId > maxId) {
+                                                maxId = currentId
+                                            }
+                                        }
+                                        newId = maxId + 1
+                                    }
+
+                                    // Create new SOS document with the incremented ID
+                                    val sosData = SOS(fullName, email, currentAddress, dateLastSent, age, sex, isFound)
+                                    db.collection("sos").document("sos$newId")
+                                        .set(sosData)
+                                        .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
+                                        .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
+
+                                    Toast.makeText(this, "Location Sent", Toast.LENGTH_SHORT).show()
+                                }
+                        } else {
+                            // Document found, update the existing one
+                            for (document in documents) {
+                                db.collection("sos").document(document.id)
+                                    .update("currentAddress", currentAddress, "dateLastSent", dateLastSent)
+                                    .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully updated!") }
+                                    .addOnFailureListener { e -> Log.w(TAG, "Error updating document", e) }
                             }
+                            Toast.makeText(this, "Location Updated", Toast.LENGTH_SHORT).show()
                         }
-                        newId = maxId + 1
                     }
-
-                    // Create new SOS document with the incremented ID
-                    val sosData = SOS(fullName, email, currentAddress, dateLastSent, age, sex, isFound)
-                    db.collection("sos").document("sos$newId")
-                        .set(sosData)
-                        .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
-                        .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
-
-                    Toast.makeText(this, "Location Sent", Toast.LENGTH_SHORT).show()
-                }
                 .addOnFailureListener { e ->
                     Log.w(TAG, "Error getting documents: ", e)
                 }
