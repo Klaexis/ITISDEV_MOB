@@ -61,7 +61,6 @@ class login_act : AppCompatActivity() {
     }
 
     fun loginUserResident(userString: String) {
-        val auth: FirebaseAuth = FirebaseAuth.getInstance()
         val db = FirebaseFirestore.getInstance()
         val userCollection = "user"
 
@@ -73,33 +72,44 @@ class login_act : AppCompatActivity() {
                     val result = task.result
                     if (result != null && !result.isEmpty) {
 
-                        Toast.makeText(this@login_act, "Welcome back!", Toast.LENGTH_SHORT).show()
+                        val document = result.documents[0]
+                        val fullName = document.getString("fullName")
 
-                        saveEmailToPreferences(userString)
+                        if (fullName != null) {
 
-                        moveToHomeRT()
+                            saveUserDetailsToPreferences(userString, fullName)
+
+                            Toast.makeText(this@login_act, "Welcome, $fullName!", Toast.LENGTH_SHORT).show()
+
+
+                            moveToHomeRT()
+                        } else {
+                            Toast.makeText(this@login_act, "User full name not found.", Toast.LENGTH_SHORT).show()
+                        }
                     } else {
                         Toast.makeText(this@login_act, "User does not exist.", Toast.LENGTH_SHORT).show()
                     }
                 } else {
-                    // Handle Firestore query failure
                     Log.e("Firestore Error", "Error: ${task.exception?.message}")
                     Toast.makeText(this@login_act, "Failed to check user existence.", Toast.LENGTH_SHORT).show()
                 }
             }
             .addOnFailureListener { exception ->
-                // Handle any additional errors
+
                 Log.e("Firestore Failure", "Error: ${exception.message}")
                 Toast.makeText(this@login_act, "Error occurred: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
-
-
     }
 
-    private fun saveEmailToPreferences(userString: String) {
+
+    private fun saveUserDetailsToPreferences(userString: String, fullName: String) {
         val sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
-        sharedPreferences.edit().putString("userid", userString).apply()
+        sharedPreferences.edit()
+            .putString("email", userString)
+            .putString("fullName", fullName)
+            .apply()
     }
+
 
     fun moveToHomeRT(){
         val intent = Intent(this, homeAnnouncement::class.java)
