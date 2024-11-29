@@ -74,13 +74,15 @@ class login_act : AppCompatActivity() {
 
                         val document = result.documents[0]
                         val fullName = document.getString("fullName")
+                        val dateOfBirth = document.getString("dateOfBirth").toString()
+                        val contactNumber = document.getString("contactNumber").toString()
+                        val sex = document.getString("sex").toString()
 
                         if (fullName != null) {
 
-                            saveUserDetailsToPreferences(userString, fullName)
+                            saveUserDetailsToPreferences(userString, fullName, dateOfBirth, contactNumber, sex)
 
                             Toast.makeText(this@login_act, "Welcome, $fullName!", Toast.LENGTH_SHORT).show()
-
 
                             moveToHomeRT()
                         } else {
@@ -102,11 +104,14 @@ class login_act : AppCompatActivity() {
     }
 
 
-    private fun saveUserDetailsToPreferences(userString: String, fullName: String) {
+    private fun saveUserDetailsToPreferences(userString: String, fullName: String, dateOfBirth: String, contactNumber: String, sex: String) {
         val sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
         sharedPreferences.edit()
             .putString("email", userString)
             .putString("fullName", fullName)
+            .putString("dateOfBirth", dateOfBirth)
+            .putString("contactNumber", contactNumber)
+            .putString("sex", sex)
             .apply()
     }
 

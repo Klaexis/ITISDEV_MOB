@@ -81,15 +81,15 @@ class miaController : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener 
             val sex: String
 
             //get the current Session or current User
-//            val sp = getSharedPreferences("userSession", MODE_PRIVATE)
-//            val fullNameData = sp.getString("residentFullName", "null")
-//            val residentContactNumber = sp.getString("residentContactNumber", "null")
+            val sp = getSharedPreferences("UserPrefs", MODE_PRIVATE)
+            val fullNameData = sp.getString("fullName", "null").toString()
+            val residentContactNumber = sp.getString("contactNumber", "null").toString()
 
             val dateSubmitted = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault()).format(
                 Date()
             )
-            val filedBy = "John Doe"
-            val contactNum = "09123456789"
+            val filedBy = fullNameData
+            val contactNum = residentContactNumber
             val isFound = false
 
             if (fullName.isEmpty() || description.isEmpty() || areaLastSeen.isEmpty() || timeLastSeen.isEmpty() || age == null) {

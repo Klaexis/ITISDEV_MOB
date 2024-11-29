@@ -91,20 +91,20 @@ class sosController : AppCompatActivity(){
                 val currentAddress = addresses[0].getAddressLine(0)
 
                 //get the current Session or current User
-//                val sp = getSharedPreferences("userSession", MODE_PRIVATE)
-//                val fullNameData = sp.getString("residentFullName", "null")
-//                val residentEmail = sp.getString("residentEmail", "null")
+                val sp = getSharedPreferences("UserPrefs", MODE_PRIVATE)
+                val fullNameData = sp.getString("fullName", "null").toString()
+                val residentEmail = sp.getString("email", "null").toString()
 
-                val fullName = "John Doe"
-                val email = "john_doe@gmail.com"
-                val sex = "Male"
+                val fullName = fullNameData
+                val email = residentEmail
+                val sex = sp.getString("sex", "null").toString()
                 val isFound = false
 
                 val dateLastSent = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault()).format(
                     Date()
                 )
 
-                val birthdateString = "10/25/2002"
+                val birthdateString = sp.getString("dateOfBirth", "null")
                 val birthdateCalendar = Calendar.getInstance()
                 birthdateCalendar.time = SimpleDateFormat("MM/dd/yyyy").parse(birthdateString)
 
