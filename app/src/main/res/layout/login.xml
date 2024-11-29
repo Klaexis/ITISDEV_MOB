@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="417sp"
+        android:layout_height="366sp"
+        android:layout_marginEnd="2sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectangle" />
+
+    <EditText
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60sp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:fontFamily="@font/roboto"
+        android:text="User Login"
+        android:textAlignment="center"
+        android:textColor="#F2FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/usernameRT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/usernameRT"
+        android:layout_width="316dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="268sp"
+        android:background="@drawable/shadowbg"
+        android:drawableEnd="@drawable/baseline_alternate_email_24"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="Enter Email"
+        android:inputType="textPersonName"
+        android:paddingLeft="15sp"
+        android:paddingRight="15sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#80FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/loginRT"
+        android:layout_width="136dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="112sp"
+        android:backgroundTint="#923838"
+        android:fontFamily="@font/roboto"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textColorLink="#3F51B5"
+        app:cornerRadius="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameRT" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
