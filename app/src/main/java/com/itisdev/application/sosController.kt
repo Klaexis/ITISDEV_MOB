@@ -163,7 +163,7 @@ class sosController : AppCompatActivity(){
                             // Document found, update the existing one
                             for (document in documents) {
                                 db.collection("sos").document(document.id)
-                                    .update("currentAddress", currentAddress, "dateLastSent", dateLastSent)
+                                    .update("currentAddress", currentAddress, "dateLastSent", dateLastSent, "found", false)
                                     .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully updated!") }
                                     .addOnFailureListener { e -> Log.w(TAG, "Error updating document", e) }
                             }
